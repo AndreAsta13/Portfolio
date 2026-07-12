@@ -2036,11 +2036,23 @@ footer#contato {
     .nav-links li a h4 { font-size: 0.7rem; }
 
     .btn-logo { font-size: 1.6rem; }
-    .nav-logo { top: 8px; }
-    .nav-logo.scrolled { left: 45px; top: 6px; }
     .nav-logo.scrolled .btn-logo { font-size: 1.1rem; }
+    .nav-logo {
+        position: fixed;
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .nav-logo.scrolled {
+        top: 6px;
+        left: 50%;
+        transform: translateX(-50%);
+        scale: 0.85;
+    }
 
-    header#Inicial { padding: 0 1rem; }
+    header#Inicial { 
+      padding: 0 1rem; 
+      justify-content: center;}
 
     .pcd-btnprincipal { font-size: 0.72rem; padding: 6px 8px; }
     .pcd-dropdown { min-width: 160px; }
@@ -2057,6 +2069,24 @@ footer#contato {
         padding: 0.4rem;
         z-index: 150; 
     }
+     .pcd-container {
+        position: fixed;
+        top: 8px;
+        right: 0.75rem;
+        z-index: 999;
+    }
+    .pcd-btnprincipal {
+        font-size: 0.6rem;
+        padding: 5px 6px;
+        white-space: nowrap;
+    }
+    .pcd-dropdown {
+        min-width: 140px;
+        max-width: 85vw;
+        right: 0;
+        left: auto;
+    }
+
 
     
     .aside-pcd {
@@ -2209,7 +2239,7 @@ footer#contato {
   
   }
   
-
+  .nav-menu { display: none; }
 
 /* ── Mobile pequeno (≤ 576px 6'(Polegadas)) ── */
 @media (max-width: 576px) {
