@@ -2218,19 +2218,21 @@ footer#contato {
     header#Inicial {
         padding: 0 0.75rem;
         height: 52px;
+        justify-content: center;
     }
 
-    /* Logo: sai do modo "flutuante gigante centralizado" e vira compacto fixo à esquerda */
+   .nav-menu { display: none; }
     .nav-logo {
+      position: fixed;
         top: 6px;
         left: 12px;
         transform: none;
     }
     .nav-logo.scrolled {
         top: 4px;
-        left: 12px;
-        transform: none;
-        scale: 1;
+        left: 50%;
+        transform: translateX(-50%);
+        scale: 0.85;
     }
     .btn-logo {
         font-size: 1.1rem;
@@ -2248,6 +2250,12 @@ footer#contato {
     }
     .nav-links { gap: 0.5rem; }
     .nav-links li a h4 { font-size: 0.62rem; }
+     .pcd-container {
+        position: fixed;
+        top: 8px;
+        right: 0.75rem;
+        z-index: 999;
+    }
 
     .pcd-btnprincipal {
         font-size: 0.6rem;
@@ -2258,7 +2266,7 @@ footer#contato {
         min-width: 140px;
         max-width: 85vw;
         right: 0;
-        left: auto; /* evita que o dropdown vaze pra fora da tela na direita */
+        left: auto; 
     }
 
 
@@ -2267,7 +2275,7 @@ footer#contato {
         width: auto;
         max-width: 40px;
         height: auto;
-        top: auto;
+        top: 70px;
         bottom: 0.35rem;
         left: 0.75rem;
         padding: 0.3rem;
@@ -2294,7 +2302,7 @@ footer#contato {
         box-shadow: 0 8px 30px rgba(0,0,0,.4);
         left: 6vw;
         bottom: auto;
-        top: 10vh;
+        top: 90px;
     }
 
     .aside-left.aberto .aside-content { max-height: 65vh; }
@@ -2454,5 +2462,9 @@ footer#contato {
     .footer-section { padding: 1rem 5% 2rem; }
     .editor-footer { padding: 1rem 5% 2rem; }
     .editor-footer span { font-size: .72rem; }
+    
+    .hero-blobs-wrapper {
+    display: none;
+}
 
 }
