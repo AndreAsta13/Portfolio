@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>a.asta.portfolio</title>
+        <link rel="icon" type="image/png" href="assets/favicon.png">
+        <link rel="stylesheet" href="css/base.css" />
+    </head>
+    <body>
+        <!-- ──── Cabaçalho ──── -->
+        <header id="Inicial">
+            
+                <div class="nav-logo" id="logoContainer" >
+                    <a href="#inicio" class="btn-logo ">
+                        a.asta.portfolio
+                    </a>
+                </div>
+            
+    
+
+            <nav class="nav-menu" aria-label="Navegação principal">
+                    <ul class="nav-links" >
+                        <li><a href="#recursos" style="color: white;" aria-label="Conteúdo Principal">Conteúdo</a></li>
+                        <li><a href="#sobre"    style="color: white;" aria-label="Sobre">Sobre</a></li>
+                        <li><a href="#contato"  style="color: white;" aria-label="Contato">Contato</a></li>
+                    </ul>
+            </nav>
+
+            <div class="pcd-container">
+                         
+                        <button type="button" class="pcd-btnprincipal" id="pcd-main-btn" aria-label="Visão Normal">
+                            Visão Normal ▼
+                        </button>
+
+                        <div class="pcd-dropdown">
+
+                            <button type="button" class="pcd-option" data-filter="normal" aria-label="Visão Normal">
+                                Visão Normal
+                            </button>
+
+                            <button type="button" class="pcd-option" data-filter="protanopia" aria-label="Protanopia (vermelho)">
+                                Protanopia (vermelho)
+                            </button>
+
+                            <button type="button" class="pcd-option" data-filter="deuteranopia" aria-label="Deuteranopia (verde) ">
+                                Deuteranopia (verde)
+                            </button>
+
+                            <button type="button" class="pcd-option" data-filter="tritanopia" aria-label="Tritanopia (azul)">
+                                Tritanopia (azul)
+                            </button>
+                        </div> 
+                    </div>
+                    <div class="desktop-only">
+                <article class="nav-cta-wrapper"aria-label="Entrar/Cadastro">
+                    <a href="#recursos" class="nav-cta">
+                    Projetos
+                    </a>
+                </article></div>
+        </header>
+        <aside class="aside-left" aria-label="Barra lateral de navegação">
+            <nav class="aside-nav" aria-label="Acessibilidade">
+                <div class="aside-pcd">
+               
+
+                
+                    <button type="button" class="pcd-btn"aria-label="Aumentar fonte" title="Aumentar fonte" style="color:var(--text);" >A+</button>
+                    <button type="button" class="pcd-btn" aria-label="Fonte média" title="Fonte média" style="color:var(--text);" >A</button>
+                    <button type="button" class="pcd-btn" aria-label="Diminuir fonte" title="Diminuir fonte" style="color:var(--text);" >A-</button>
+                    <button type="button" class="pcd-btn" aria-label="Alto contraste" title="Alto contraste" style="color: var(--text);" >🌑☀️</button>
+                    <button type="button" class="pcd-btn" aria-label="Sem contraste" title="Sem contraste" style="color: var(--text);" >◑</button>
+                </div>  
+            </nav>
+            <button type="button"  class="aside-toggle" aria-label="Abrir painel"style="color: var(--text);" title="Abrir painel">☰</button>
+
+            <div class="aside-content">
+
+                <ul class="aside-links">
+                    <li class="avaliacao-bloco">
+                        <p class="avaliacao-titulo">Se pode me ajudar?</p>
+                       
+                        <form class="avaliacao-form" novalidate>
+                            <div class="avaliacao-pergunta">
+                                        <span>O que você achou do design ?</span>
+                                        <div class="avaliacao-opcoes" data-pergunta="1">
+                                            <button type="button" data-valor="1">1</button>
+                                            <button type="button" data-valor="2">2</button>
+                                            <button type="button" data-valor="3">3</button>
+                                            <button type="button" data-valor="4">4</button>
+                                            <button type="button" data-valor="5">5</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="avaliacao-pergunta">
+                                        <span> Sobre a estrutura do site, o que você achou?</span>
+                                        <div class="avaliacao-opcoes" data-pergunta="2">
+                                            <button type="button" data-valor="1">1</button>
+                                            <button type="button" data-valor="2">2</button>
+                                            <button type="button" data-valor="3">3</button>
+                                            <button type="button" data-valor="4">4</button>
+                                            <button type="button" data-valor="5">5</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="avaliacao-pergunta">
+                                        <span>fiz vários ajustes para acessibilidade, foi uma experiencia satifátoria ?</span>
+                                        <div class="avaliacao-opcoes" data-pergunta="3">
+                                            <button type="button" data-valor="1">1</button>
+                                            <button type="button" data-valor="2">2</button>
+                                            <button type="button" data-valor="3">3</button>
+                                            <button type="button" data-valor="4">4</button>
+                                            <button type="button" data-valor="5">5</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="avaliacao-pergunta">
+                                        <span> o que você achou em questão de qualidade</span>
+                                        <div class="avaliacao-opcoes" data-pergunta="4">
+                                            <button type="button" data-valor="1">1</button>
+                                            <button type="button" data-valor="2">2</button>
+                                            <button type="button" data-valor="3">3</button>
+                                            <button type="button" data-valor="4">4</button>
+                                            <button type="button" data-valor="5">5</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="avaliacao-pergunta">
+                                        <span> você recomendaria o portfólio para alguém?</span>
+                                        <div class="avaliacao-opcoes" data-pergunta="5">
+                                            <button type="button" data-valor="1">Sim</button>
+                                            
+                                            <button type="button" data-valor="5">Não</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="avaliacao-feedback" hidden>
+                                        <label for="feedbackTexto">O que poderia melhorar?</label>
+                                        <textarea id="feedbackTexto" placeholder="Deixe seu feedback..."></textarea>
+                                    </div>
+
+                                    <div class="avaliacao-obrigado" hidden>
+                                        <span>🎉 Obrigado pela avaliação!</span>
+                                    </div>
+
+                                
+                            <button type="submit" class="avaliacao-enviar" disabled>Enviar</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+            
+
+        </aside>
+        
+        <main id="pcd-filtered-area">
+            <!-- ──── Inicio(Hero) ──── -->
+            <section class="hero" id="inicio">
+                <div class="hero-blobs-wrapper">
+                    <div class="hero-blob blob1"></div>
+                    <div class="hero-blob blob2"></div>
+                </div>
+                <div class="hero-inner">
+                    <div class="hero-content">
+                        <article class="hero-badge">
+                            <span class="badge-dot"></span>
+                            Descubra, Domine e Realize!!
+                        </article>
+                        <h1>Transformando <em>ideias</em> em experiências reais</h1>
+                        <p class="hero-sub">
+                            Um portfolio completo para verificar, analisar e conectar.
+                             Tudo que você precisa, em um só lugar.
+                        </p>
+                        <div class="hero-btns">
+                            <a href="#sobre" class="btn-primary">
+                                Sobre mim →
+                            </a>
+                            <a href="#recursos" class="btn-outline">
+                                Ver recursos →
+                            </a>
+                        </div>
+                    </div>
+                        <figure>
+                        <video autoplay muted loop playsinline aria-hidden="true" >
+                            <source src="assets/Andre_IA.mp4" type="video/mp4" />
+                        </video>
+                        <h4>(para obter uma boa experiencia, recomendo o uso dos botôes do canto superior esquerdo e a pratica do scroll do mouse)</h4>
+                        
+                    </figure>
+                </div>
+                    <div class="hero-scroll">
+                        <span>rolar</span>
+                        <div class="scroll-line"></div>
+                    </div>
+            </section>
+            <!-- ──── RECURSOS ──── -->
+           <section id="recursos">
+                    <h2>Projetos/Recursos</h2>
+                    <p>Projetos mais desafiadores que já trabalhei nos ultimos últimos anos </p>
+                    <div class="features-grid">
+                       
+                        <article class="feature-card">
+                           
+                            <a href="#recursos0">
+                                <h2>Acessibilidade</h2>
+                                <div class="feature-video-wrapper">
+                                    <video class="feature-video" id="video-acessibilidade" muted playsinline aria-hidden="true">
+                                        <source src="assets/acessibilidade.mp4" type="video/mp4" />
+                                    </video>
+                                    <button class="video-toggle" data-target="video-acessibilidade" aria-label="Pausar vídeo">❚❚</button>
+                                     <button class="video-restart" data-target="video-acessibilidade" aria-label="Reiniciar vídeo">⟲</button>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="feature-card">
+                            <a href="#recursos1">
+                                
+                                <div class="feature-video-wrapper">
+                                    <button class="video-mute" data-target="video-som" aria-label="Ativar som">🔇</button>
+                                    <video class="feature-video1" id="video-som" muted playsinline aria-hidden="true">
+                                        <source src="assets/DesenvolvimentoDoSom.mp4" type="video/mp4" />
+                                    </video>
+                                    <button class="video-toggle" data-target="video-som" aria-label="Pausar vídeo">❚❚</button>
+                                    <button class="video-restart" data-target="video-som" aria-label="Reiniciar vídeo">⟲</button>
+                                   
+                                </div>
+                                <h2>Desenvolvimento do Som</h2>
+                            </a>
+                        </article>
+                        <article class="feature-card">
+                            
+                            <a href="#recursos2">
+                                <h2>Captações de Movimentos(Em Breve)</h2>
+                                <div class="feature-video-wrapper">
+                                    <video class="feature-video2" id="video-loading" autoplay muted loop playsinline aria-hidden="true">
+                                        <source src="assets/LOADING.mp4" type="video/mp4" />
+                                    </video>
+                                    <button class="video-toggle" data-target="video-loading" aria-label="Pausar vídeo">❚❚</button>
+                                    
+                                </div>
+                            </a>
+                            
+                        </article>
+                    </div>
+                   
+            </section>
+            <section id="recursos0">
+                
+       
+    <div class="recursos0-layout">
+        
+
+        <!-- Tópicos da esquerda -->
+         
+        <div class="topicos-coluna topicos-esquerda">
+           
+            
+            <div class="topico-item">
+                <h3 class="topico-titulo"><span class="topico-eyebrow">Entenda sobre</span> 
+                Controle de Fonte </h3>
+                <p class="topico-texto">Botões A+, A e A- que ajustam o tamanho do texto em toda a página, sem precisar depender do zoom do navegador.</p>
+            </div>
+            <div class="topico-item">
+                <h3 class="topico-titulo"><span class="topico-eyebrow">Entenda sobre </span>
+                Contraste</h3>
+                <p class="topico-texto">Alternância entre tema neutro, tema escuro e um tema claro de alto contraste, facilitando a leitura para quem tem baixa visão.</p>
+            </div>
+            <div class="topico-item">
+                <h3 class="topico-titulo"><span class="topico-eyebrow">Entenda sobre</span>
+               Filtros de Daltonismo</h3>
+                <p class="topico-texto">Filtros SVG para protanopia, deuteranopia e tritanopia, ajustando as cores do site conforme o tipo de daltonismo do visitante.</p>
+            </div>
+        </div>
+        
+        <!-- Círculo giratório central -->
+        <div class="textoRecursos0">
+            <div class="frente frente1">
+                <div class="circulo"></div>
+            </div>
+            <div class="frente frente2">
+                <div class="circulo"></div>
+            </div>
+            <h2>Acessibilidade</h2>
+            
+        </div>
+
+        <!-- Tópicos da direita -->
+        <div class="topicos-coluna topicos-direita">
+            <div class="topico-item">
+                <h3 class="topico-titulo"><span class="topico-eyebrow">Entenda sobre</span>
+                Navegação por Teclado</h3>
+                <p class="topico-texto">Foco visível em botões e links, permitindo navegar por todo o site usando apenas o teclado, sem depender do mouse.</p>
+            </div>
+            <div class="topico-item">
+                <h3 class="topico-titulo"><span class="topico-eyebrow">Entenda sobre</span>Leitores de Tela</h3>
+                <p class="topico-texto">Uso de aria-label e estrutura semântica em botões, ícones e formulários, para uma leitura clara por leitores de tela.</p>
+            </div>
+            <div class="topico-item">
+                <h3 class="topico-titulo"><span class="topico-eyebrow">Entenda sobre</span>
+              Movimento Reduzido</h3>
+                <p class="topico-texto">Respeito à preferência do sistema por menos animações, desativando transições e efeitos para quem sente desconforto com movimento.</p>
+            </div>
+         
+
+        </div>
+
+    </div>
+
+    <div class="hero-scroll">
+        <span>rolar</span>
+        <div class="scroll-line"></div>
+    </div>
+</section>
+<section id="recursos1">
+    <div class="recursos1-layout">
+
+        <!-- Tópicos da esquerda -->
+        <div class="topicos-coluna topicos-esquerda">
+            <div class="topico-item">
+                <h3 class="topico-titulo"><span class="topico-eyebrow">Entenda sobre</span>Reconhecimento de Voz</h3>
+                <p class="topico-texto">Identifica quem está falando. O foco é quem é a pessoa, baseando-se em características exclusivas como o tom, a anatomia das cordas vocais e a forma de articular as palavras.</p>
+            </div>
+            <div class="topico-item">
+                <h3 class="topico-titulo"><span class="topico-eyebrow">Entenda sobre</span>Diarização</h3>
+                <p class="topico-texto">Identificação de quem está falando em cada trecho do áudio, separando e rotulando diferentes locutores na transcrição.</p>
+            </div>
+            <div class="topico-item">
+                <h3 class="topico-titulo"><span class="topico-eyebrow">Entenda sobre</span>Captação de Áudio</h3>
+                <p class="topico-texto">Manipulação do áudio captado para melhorar a qualidade do som, fazendo com que se torne mais fina ou mais grossa e amplificando o volume antes do processamento, aumentando a precisão.</p>
+            </div>
+        </div>
+
+        <!-- Círculo giratório central -->
+        <div class="textoRecursos1">
+            <div class="frente frente1">
+                <div class="circulo"></div>
+            </div>
+
+            <div class="frente frente2">
+                <div class="circulo"></div>
+            </div>
+            <h2> Sistema de Desenvolvimento do Som</h2>
+        </div>
+
+        <!-- Tópicos da direita -->
+        <div class="topicos-coluna topicos-direita">
+            <div class="topico-item">
+                <h3 class="topico-titulo"><span class="topico-eyebrow">Entenda sobre</span>Camadas Intermediárias</h3>
+                <p class="topico-texto">Sistema de cadastro, login e banco de dados que sustenta a segurança e privacidades de seus arquivos de outros usuários.</p>
+            </div>
+            <div class="topico-item">
+                <h3 class="topico-titulo"><span class="topico-eyebrow">Entenda sobre</span>Transcrição</h3>
+                <p class="topico-texto"> A capacidade de transcrever arquivos de MP3/MP4 ou em tempo real de usuários, transformando aúdio em textos.</p>
+            </div>
+            <div class="topico-item">
+                <h3 class="topico-titulo"><span class="topico-eyebrow">Entenda sobre</span>Armazenamento</h3>
+                <p class="topico-texto">Capacidade de guardar áudios e transcrições de forma segura, permitindo consulta e reprocessamento posterior.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="hero-scroll">
+        <span>rolar</span>
+        <div class="scroll-line"></div>
+    </div>
+</section>
+
+<section id="recursos2">
+    <div class="recursos2-layout">
+
+        <!-- Tópicos da esquerda -->
+        <div class="topicos-coluna topicos-esquerda">
+            
+        </div>
+
+        <!-- Círculo giratório central -->
+        <div class="textoRecursos2">
+            <div class="frente frente1">
+                <div class="circulo"></div>
+                <div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div>
+            </div>
+            <div class="frente frente2">
+                <div class="circulo"></div>
+                <div class="circulo"></div>
+                <div class="circulo"></div>
+                <div class="circulo"></div>
+                <div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div>
+            </div>
+            <h2>Captações de Movimentos(Em breve)</h2>
+        </div>
+
+        <!-- Tópicos da direita -->
+        <div class="topicos-coluna topicos-direita">
+            
+            <div class="topico-item">
+                <h3 class="topico-titulo">Visualização </h3>
+                <video class="feature-video2" id="" autoplay muted loop playsinline aria-hidden="true">
+                    <source src="assets/captação_movimento.mp4" type="video/mp4" />
+                </video>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <div class="hero-scroll">
+        <span>rolar</span>
+        <div class="scroll-line"></div>
+    </div>
+</section>
+    <section id="recursos3">
+    <div class="recursos3-layout">
+
+        <!-- Tópicos da esquerda -->
+        <div class="topicos-coluna topicos-esquerda">
+            <div class="topico-item">
+                <h3 class="topico-titulo"><span class="topico-eyebrow">Entenda sobre</span>Frameworks</h3>
+                <p class="topico-texto">Mais de 10 frameworks que possuo conhecimento para ajudar a procurar o o que necessitar de sua lista em menor tempo.</p>
+            </div>
+            
+           
+        </div>
+
+        <!-- Círculo giratório central -->
+        <div class="textoRecursos3">
+            <div class="frente frente1">
+                <div class="circulo"></div>
+            </div>
+            <div class="frente frente2">
+                <div class="circulo"></div>
+            </div>
+            <h2>API de Ordenação</h2>
+        </div>
+
+        <!-- Tópicos da direita -->
+        <div class="topicos-coluna topicos-direita">
+            <div class="topico-item">
+                <h3 class="topico-titulo"><span class="topico-eyebrow">Entenda sobre</span>Analise de Algoritmos</h3>
+                <p class="topico-texto">verifico o "custo" que de um algoritmo adaptado em termos de  tempo gasto para executa-lo e do espaço(memória) ocupado durante a sua execução.</p>
+            </div>
+           
+           
+        </div>
+
+    </div>
+
+    <div class="hero-scroll">
+        <span>rolar</span>
+        <div class="scroll-line"></div>
+    </div>
+</section>
+
+         <!-- ──── SOBRE ──── -->
+            <section id="sobre" class="section-inner">
+                <div  class="about-grid">           
+                    <figure class="about-placeholder">
+                        <img src="assets/ImageAndré.jpeg" class="imageandre" alt="foto de André Asta Oliveira" />
+                    </figure>
+                    <article>
+                        
+                        <h2 class="section-title">Quem sou eu e onde estou</h2>
+                        <p style="color:var(--text); font-size:.93rem; margin-top:.8rem;">
+                           <strong> Meu nome é <b>André Asta Oliveira</b> nasci no dia 13/03/2003, Minha cidade natal é em São Paulo e atualmente moro em São José dos Campos,
+                            Sou uma pessoa apaixonada por tecnologia e desenvolvimento, com a missão de facilitar
+                            a vida de empreendedores, pessoas com deficiências e desenvolvedores de todo o Brasil.
+                        </strong></p>
+                        <ul class="about-list">
+                            <li><span class="check">✓</span><strong>Presente na área de tecnologia desde 2022</strong></li>
+                            <li><span class="check">✓</span><strong>Graduando em Ciência da Computação (Unip)</strong></li>
+                            <li><span class="check">✓</span><strong>Moro em São José dos Campos e possuo disponibilidade para trabalhar em São Paulo</strong></li>
+                            <li><span class="check">✓</span><strong>Capacitado em desenvolver projetos e  com códigos limpos</strong></li>
+                            <li><span class="check">✓</span><strong>Deficiente Auditivo desde os 3 anos de idade</strong></li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <!-- ──── RODAPÉ ──── -->
+         
+        
+        <footer id="contato">
+            <section class="footer-section">
+               
+                <!-- Três colunas lado a lado -->
+                <div class="footer-colunas">
+                    <section class="footer-col-item">
+                        <h3>Redes Sociais</h3>
+                      
+                        <nav class="social-links" aria-label="Redes sociais">
+                            <a href="https://www.instagram.com/andre.asta1/" class="social-btn" title="Instagram" target="_blank" rel="noopener noreferrer"></a>
+                            <a href="https://www.linkedin.com/in/andre-asta-oliveira/" class="social-btn2" title="LinkedIn" target="_blank" rel="noopener noreferrer"></a>
+                            <a href="https://github.com/AndreAsta13" class="social-btn3" title="GitHub" target="_blank" rel="noopener noreferrer"></a>
+                        </nav>
+                    </section>
+                    <section class="footer-col-item">
+                        <h3>Deficiencia Auditiva</h3>
+                        <ul>
+                            <li>
+                                <a href="assets/Audiometria2026.pdf" download>
+                                    Baixar Audiometria
+                                </a>
+                            </li>
+                            <li>
+                                <a href="assets/LaudoDraMona2026.pdf" download>
+                                    Baixar Laudo
+                                </a></li>
+                        </ul>
+                    </section>
+                     <section class="footer-col-item">
+                        <h3>Contato</h3>
+                        <ul>
+                            <li style="color:   var(--logoborder)"> <strong> Email Pessoal:</strong></li>
+                            <li> a.asta.oliveira@gmail.com</li>
+                            <li style="color:   var(--logoborder)"> <strong> Email Profissional:</strong></li>
+                            <li > a.asta.desenvolvedor@gmail.com</li>
+                            <li style="color:  var(--logoborder)"> <strong>Celular(Somente WhatsApp):</strong></li>
+                            <li> (11)974447080</li>
+                        </ul>
+                    </section>   
+                   <section class="footer-col-item">
+                        <h3>Navergação</h3>
+                        <ul>
+                            <li><a href="#inicio">Início</a></li>
+                            <li><a href="#recursos">Projetos</a></li>
+                            <li><a href="#recursos0">Acessibilidade</a></li>
+                            <li><a href="#recursos1">Desenvolvimento de som</a></li>
+                            <li><a href="#recursos2">Captação de movimentos</a></li>
+                            <li><a href="#sobre">Sobre mim</a></li>
+                        </ul>
+                    </section>
+                     
+                                        
+                </div>
+            </section>
+        
+            <article class="editor-footer">
+            <span>© 2026 a.asta.portfolio. Todos os direitos reservados. </span>
+            </article>
+        </footer>
+        <script src="js/base.js"></script>
+    </body>
+ </html>
