@@ -2010,7 +2010,7 @@ footer#contato {
         grid-template-columns: 1fr; /* 2 colunas, o 3º quebra pra linha de baixo */
         gap: 1rem;
     }
-    #recursos .video-restart .video-toggle .video-mute {font-size: 220px;}
+    
     
     .feature-card { min-height: 320px; }
     .feature-card h2 { font-size: 1rem; padding: .6rem; }
@@ -2352,12 +2352,16 @@ footer#contato {
         right: 0;
         left: auto; 
     }
-
-
+ .aside-left{ top: calc(var(--header-height) - 1.8rem); }
   #recursos .video-restart, 
   #recursos .video-toggle, 
   #recursos .video-mute {
-    font-size: 18px; }
+    font-size: 25px;
+  
+        /* Cancela qualquer empurrão para cima anterior */
+    top: 10px;          /* Cria uma distância de 10px logo abaixo do vídeo */
+    display: inline-flex; /* Garante que eles fiquem alinhados lado a lado */
+    margin: 0 5px; }
 
     .aside-pcd {
         flex-direction: row;
@@ -2554,13 +2558,13 @@ footer#contato {
     }
     .nav-logo.scrolled {
         top: 4px;
-        left: 45%;
+        left: 20%;
         transform: translateX(-50%);
         scale: 0.81;
     }
     
     .btn-logo {
-        font-size: 0.9rem;
+        font-size: 1.9rem;
         letter-spacing: -0.02em;
     }
 }
