@@ -2388,7 +2388,7 @@ footer#contato {
     .avaliacao-titulo { font-size: 0.75rem; }
     .avaliacao-opcoes button { height: 24px; font-size: 0.68rem; }
 
-    .hero { padding: calc(var(--header-height) + 1.5rem) 6% 3rem; }
+    .hero { padding: calc(var(--header-height) + 120px) 6% 3rem; }
 
     .hero-inner {
         flex-direction: column;
@@ -2433,9 +2433,7 @@ footer#contato {
     }
     .hero-blobs-wrapper {
     display: none;}
-    .hero-badge {
-        display: none !important;
-    }
+   
    
 
     .blob1, .blob2 { filter: blur(60px); } 
