@@ -2212,7 +2212,7 @@ footer#contato {
     .feature-video,
     .feature-video1,
     .feature-video2 {
-        width: 100%;
+        width: 130%;
         height: 100%;
         flex: none;
     }
@@ -2361,7 +2361,7 @@ footer#contato {
         /* Cancela qualquer empurrão para cima anterior */
     top: 10px;          /* Cria uma distância de 10px logo abaixo do vídeo */
     display: inline-flex; /* Garante que eles fiquem alinhados lado a lado */
-    margin: 0 5px; }
+    margin: 0 5px;}
 
     .aside-pcd {
         flex-direction: row;
@@ -2461,10 +2461,11 @@ footer#contato {
     .feature-video,
     .feature-video1,
     .feature-video2 {
-        width: 100%;
-        height: 100%;
-        flex: none;
-    }
+    width: 100% !important;  
+    height: auto !important; 
+    max-width: 100%;        
+    flex: none;
+}
     .feature-card:nth-child(3) .feature-video-wrapper { flex: 1; }
 
     .video-toggle, .video-restart, .video-mute {
