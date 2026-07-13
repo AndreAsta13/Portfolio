@@ -2318,7 +2318,7 @@ footer#contato {
         scale: 0.85;
     }
     .btn-logo {
-        font-size: 1.1rem;
+        font-size: 2.1rem;
         letter-spacing: -0.02em;
     }
     
@@ -2544,6 +2544,23 @@ footer#contato {
     .editor-footer { padding: 1rem 5% 2rem; }
     .editor-footer span { font-size: .72rem; }
   }
-
-
+@media (max-width: 476px) {
+  .nav-menu { display: none; }
+    .nav-logo {
+      position: fixed;
+        top: 6px;
+        left: 12px;
+        transform: none;
+    }
+    .nav-logo.scrolled {
+        top: 4px;
+        left: 45%;
+        transform: translateX(-50%);
+        scale: 0.5;
+    }
+    .btn-logo {
+        font-size: 1.3rem;
+        letter-spacing: -0.02em;
+    }
+}
 
