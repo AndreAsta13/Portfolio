@@ -2556,7 +2556,7 @@ footer#contato {
         top: 4px;
         left: 45%;
         transform: translateX(-50%);
-        scale: 0.5;
+        scale: 0.01;
     }
     .btn-logo {
         font-size: 1.3rem;
