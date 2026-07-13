@@ -2431,7 +2431,12 @@ footer#contato {
         margin-top: .5rem;
         line-height: 1.5;
     }
-
+    .hero-blobs-wrapper {
+    display: none;}
+    .hero-badge {
+        display: none !important;
+    }
+}
     .hero-scroll { display: none; } 
 
     .blob1, .blob2 { filter: blur(60px); } 
@@ -2542,11 +2547,6 @@ footer#contato {
     .editor-footer { padding: 1rem 5% 2rem; }
     .editor-footer span { font-size: .72rem; }
     
-    .hero-blobs-wrapper {
-    display: none;}
-  .hero-badge {
-        display: none !important;
-    }
-}
+
 
 
