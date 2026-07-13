@@ -2556,10 +2556,11 @@ footer#contato {
         top: 4px;
         left: 45%;
         transform: translateX(-50%);
-        scale: 0.01;
+        scale: 0.81;
     }
+    
     .btn-logo {
-        font-size: 1.3rem;
+        font-size: 0.9rem;
         letter-spacing: -0.02em;
     }
 }
