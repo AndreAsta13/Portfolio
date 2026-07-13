@@ -244,8 +244,13 @@ let bloqueado = false;
 
 const reduzMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+function scrollPorSecaoAtivo() {
+  return window.matchMedia('(min-width: 1800px)').matches;
+}
+
 window.addEventListener("wheel", (e) => {
-   if (e.ctrlKey) return;
+   if (!scrollPorSecaoAtivo()) return; 
+  if (e.ctrlKey) return;
    if (e.target.closest('.aside-content')) return;
     e.preventDefault();
 
@@ -346,7 +351,8 @@ function ativarCard(index) {
   featureCards.forEach((card, i) => {
     card.classList.toggle('video-ativo', i === index);
   });
-   if (window.matchMedia('(min-width: 769px)').matches) {
+   const ehGridHorizontal = window.matchMedia('(min-width: 1801px)').matches;
+   if (window.matchMedia('(min-width: 1801px)').matches) {
     const colunas = featureCards.map((_, i) => (i === index ? "2.4fr" : "0.6fr"));
     featuresGrid.style.gridTemplateColumns = colunas.join(" ");
   } else {
@@ -417,4 +423,8 @@ document.querySelectorAll('.video-mute').forEach(btn => {
     btn.textContent = video.muted ? '🔇' : '🔊';
     btn.setAttribute('aria-label', video.muted ? 'Ativar som' : 'Silenciar vídeo');
   });
+});
+window.addEventListener('resize', () => {
+  const cardAtivo = featureCards.findIndex(c => c.classList.contains('video-ativo'));
+  if (cardAtivo !== -1) ativarCard(cardAtivo);
 });
