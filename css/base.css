@@ -2436,8 +2436,7 @@ footer#contato {
     .hero-badge {
         display: none !important;
     }
-}
-    .hero-scroll { display: none; } 
+   
 
     .blob1, .blob2 { filter: blur(60px); } 
 
@@ -2546,7 +2545,7 @@ footer#contato {
     .footer-section { padding: 1rem 5% 2rem; }
     .editor-footer { padding: 1rem 5% 2rem; }
     .editor-footer span { font-size: .72rem; }
-    
+  }
 
 
 
