@@ -748,7 +748,7 @@ footer {
 }
 .hero h4 {
 position: absolute;
-  bottom: -15%;
+  bottom: 10%;
   left: 70%;
   transform: translate(-50%, -45%);
   z-index: 99;
@@ -756,7 +756,7 @@ position: absolute;
   max-width: 520px;
   background: transparent;
   text-align: left;
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: var(--logo);
   border-color: var(--border);}
  
