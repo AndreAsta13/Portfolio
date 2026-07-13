@@ -935,7 +935,7 @@ position: absolute;
 }
 
 .feature-video{
-  width: 185%;
+  width: 105%;
   height: 85%;
   object-fit: cover;
   display: block;
