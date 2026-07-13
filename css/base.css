@@ -2544,7 +2544,9 @@ footer#contato {
     
     .hero-blobs-wrapper {
     display: none;}
-  .badge-dot{display: none;}
+  .hero-badge {
+        display: none !important;
+    }
 }
 
 
