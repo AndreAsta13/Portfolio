@@ -224,76 +224,59 @@ document.addEventListener('click', (e) => {
     pcdDropdown.classList.remove('aberto');
   }
 });
-// JS — observa quando a seção entra na tela
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("visivel");
-        }
-    });
-}, { threshold: 0.10 });
-
-document.querySelectorAll("section").forEach(s => observer.observe(s));
 
 /* ════════════════════════════════════════════
-   SCROLL POR SEÇÃO (respeita prefers-reduced-motion)
+   Hero
 ════════════════════════════════════════════ */
-const secoes = document.querySelectorAll("main section, footer");
-let secaoAtual = 0;
-let bloqueado = false;
+function splitIntoLetters(el, baseDelay = 0, delayStep = 0.03) {
+  let i = 0;
 
-const reduzMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function processNode(node) {
+    if (node.nodeType === Node.TEXT_NODE) {
+      const frag = document.createDocumentFragment();
+      const words = node.textContent.split(' ');
 
-function scrollPorSecaoAtivo() {
-  return window.matchMedia('(min-width: 1800px)').matches;
-}
+      words.forEach((word, wIndex) => {
+        const wordSpan = document.createElement('span');
+        wordSpan.className = 'word';
 
-window.addEventListener("wheel", (e) => {
-   if (!scrollPorSecaoAtivo()) return; 
-  if (e.ctrlKey) return;
-   if (e.target.closest('.aside-content')) return;
-    e.preventDefault();
+        [...word].forEach(char => {
+          const letterSpan = document.createElement('span');
+          letterSpan.className = 'letter';
+          letterSpan.textContent = char;
+          letterSpan.style.animationDelay = `${baseDelay + i * delayStep}s`;
+          wordSpan.appendChild(letterSpan);
+          i++;
+        });
 
-    if (bloqueado) return;
-    bloqueado = true;
+        frag.appendChild(wordSpan);
 
-    if (e.deltaY > 0 && secaoAtual < secoes.length - 1) {
-        secaoAtual++; // scroll pra baixo
-    } else if (e.deltaY < 0 && secaoAtual > 0) {
-        secaoAtual--; // scroll pra cima
+        // adiciona espaço real entre palavras (exceto na última)
+        if (wIndex < words.length - 1) {
+          const spaceSpan = document.createElement('span');
+          spaceSpan.className = 'letter space';
+          spaceSpan.textContent = ' ';
+          spaceSpan.style.animationDelay = `${baseDelay + i * delayStep}s`;
+          frag.appendChild(spaceSpan);
+          i++;
+        }
+      });
+
+      node.replaceWith(frag);
+    } else if (node.nodeType === Node.ELEMENT_NODE) {
+      [...node.childNodes].forEach(processNode);
     }
+  }
 
-    secoes[secaoAtual].scrollIntoView({
-        behavior: reduzMovimento ? 'auto' : 'smooth'
-    });
+  [...el.childNodes].forEach(processNode);
+}
+document.addEventListener('DOMContentLoaded', () => {
+  const h1 = document.querySelector('.hero-content h1');
+  const sub = document.querySelector('.hero-content .hero-sub');
 
-    // Aguarda a animação terminar antes de permitir novo scroll
-    setTimeout(() => { bloqueado = false; }, reduzMovimento ? 0 : 800);
-
-}, { passive: false });
-
-
-//Inpede bug de scroll ao clicar em links internos (ex: nav)
-document.addEventListener('click', function(e) {
-  const link = e.target.closest('a[href^="#"]');
-  if (!link) return;
-
-  const id = link.getAttribute('href').replace('#', '');
-  if (!id) return;
-
-  const alvo = document.getElementById(id);
-  if (!alvo) return;
-
-  e.preventDefault();
-
-  // Atualiza secaoAtual para a seção de destino
-  const lista = Array.from(document.querySelectorAll('main section, footer'));
-  const index = lista.indexOf(alvo);
-  if (index !== -1) secaoAtual = index;
-
-  alvo.scrollIntoView({ behavior: reduzMovimento ? 'auto' : 'smooth' });
+  if (h1) splitIntoLetters(h1, 0.1, 0.03);
+  if (sub) splitIntoLetters(sub, 1.0, 0.01);
 });
-
 /* ════════════════════════════════════════════
    RECURSOS — vídeos em sequência + play/pause
 ════════════════════════════════════════════ */
