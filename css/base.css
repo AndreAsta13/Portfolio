@@ -2045,6 +2045,7 @@ footer#contato {
         padding: 4rem 5% 3rem;
     }
 
+    
     .recursos0-layout,
     .recursos1-layout,
     .recursos2-layout,
@@ -2062,6 +2063,7 @@ footer#contato {
     .textoRecursos1 h2 { font-size: 1.2rem; }
     .textoRecursos2 h2,
     .textoRecursos3 h2 { font-size: 1.05rem; }
+    .textoRecursos0 p { display: none; }
 
     .topicos-coluna {
         flex-direction: row;
@@ -2253,7 +2255,7 @@ footer#contato {
     .textoRecursos1 { width: 260px; height: 260px; }
     .textoRecursos2,
     .textoRecursos3 { width: 220px; height: 280px; }
-
+    .textoRecursos0 p { display: none; }
     .textoRecursos0 h2,
     .textoRecursos1 h2 { font-size: 1.05rem; }
     .textoRecursos2 h2,
