@@ -26,6 +26,38 @@ function handleSubmit() {
   msg.style.display = 'block';
   setTimeout(() => msg.style.display = 'none', 4000);
 }
+/* ================================================
+Acessibilidade
+================================================ */
+const toggle = document.querySelector('.pcd-toggle');
+const opcoes = document.querySelector('.pcd-opcoes');
+let fecharTimeout;
+
+function abrirPainel() {
+    opcoes.hidden = false;
+    toggle.setAttribute('aria-expanded', 'true');
+    reiniciarTimer();
+}
+
+function fecharPainel() {
+    opcoes.hidden = true;
+    toggle.setAttribute('aria-expanded', 'false');
+    clearTimeout(fecharTimeout);
+}
+
+function reiniciarTimer() {
+    clearTimeout(fecharTimeout);
+    fecharTimeout = setTimeout(fecharPainel, 6000); // fecha após 4 segundos
+}
+
+toggle.addEventListener('click', () => {
+    const aberto = toggle.getAttribute('aria-expanded') === 'true';
+    aberto ? fecharPainel() : abrirPainel();
+});
+
+// reinicia o timer se o usuário clicar em algum botão dentro do painel
+opcoes.addEventListener('click', reiniciarTimer);
+
 
 
 
