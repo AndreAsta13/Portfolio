@@ -366,8 +366,8 @@ function ativarCard(index) {
   featureCards.forEach((card, i) => {
     card.classList.toggle('video-ativo', i === index);
   });
-   const ehGridHorizontal = window.matchMedia('(min-width: 1801px)').matches;
-   if (window.matchMedia('(min-width: 1801px)').matches) {
+   const ehGridHorizontal = window.matchMedia('(min-width: 1025px)').matches;
+   if (window.matchMedia('(min-width: 1025px)').matches) {
     const colunas = featureCards.map((_, i) => (i === index ? "2.4fr" : "0.6fr"));
     featuresGrid.style.gridTemplateColumns = colunas.join(" ");
   } else {
@@ -442,4 +442,48 @@ document.querySelectorAll('.video-mute').forEach(btn => {
 window.addEventListener('resize', () => {
   const cardAtivo = featureCards.findIndex(c => c.classList.contains('video-ativo'));
   if (cardAtivo !== -1) ativarCard(cardAtivo);
+});
+/* ════════════════════════════════════════════
+   Comunicação
+════════════════════════════════════════════ */
+const form = document.getElementById('quoteForm');
+const status = document.getElementById('formStatus');
+const btn = form.querySelector('button[type="submit"]');
+
+form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const interesse = form.interesse.value;
+    form._subject.value = `Solicitação de orçamento - ${interesse}`;
+
+    const originalBtnHTML = btn.innerHTML;
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Enviando...';
+    status.textContent = '';
+    status.className = 'form-status';
+
+    try {
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+            status.textContent = 'Solicitação enviada com sucesso! Em breve entraremos em contato.';
+            status.classList.add('success');
+            form.reset();
+        } else {
+            const data = await response.json();
+            const msg = data.errors ? data.errors.map(err => err.message).join(', ') : 'Erro ao enviar. Tente novamente.';
+            status.textContent = msg;
+            status.classList.add('error');
+        }
+    } catch (error) {
+        status.textContent = 'Erro de conexão. Verifique sua internet e tente novamente.';
+        status.classList.add('error');
+    } finally {
+        btn.disabled = false;
+        btn.innerHTML = originalBtnHTML;
+    }
 });

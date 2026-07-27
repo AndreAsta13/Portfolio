@@ -23,6 +23,7 @@
             <nav class="nav-menu" aria-label="Navegação principal">
                     <ul class="nav-links" >
                         <li><a href="#recursos" style="color: white;" aria-label="Conteúdo Principal">Conteúdo</a></li>
+                         <li><a href="#comunicacão" style="color: white;" aria-label="Solicitação">Solicitação</a></li>
                         <li><a href="#sobre"    style="color: white;" aria-label="Sobre">Sobre</a></li>
                         <li><a href="#contato"  style="color: white;" aria-label="Contato">Contato</a></li>
                     </ul>
@@ -237,7 +238,6 @@
                             <a href="#recursos2"> Captações de Movimentos(Em breve)</a>
                             <a href="#recursos3"> Mais informações</a>
                         </nav>
-                       
                     </div>
                     <div class="hero-scroll">
                         <span>rolar</span>
@@ -429,7 +429,7 @@
         <div class="topicos-coluna topicos-esquerda">
             <div class="topico-item">
                 <h3 class="topico-titulo"><span class="topico-eyebrow">Entenda sobre</span>Frameworks</h3>
-                <p class="topico-texto">Mais de 10 frameworks/métodos em que possuo conhecimento para ajudar a procurar o que você necessitar sobre lista de ordenação, Produtos de software, Sites Web entre outras coisas .</p>
+                <p class="topico-texto">Mais de 10 frameworks/métodos em que possuo conhecimento para ajudar a procurar o que você necessitar sobre Algoritmo de ordenação, Produtos de software, Sites Web entre outras coisas .</p>
         </div>
             
             <div class="topico-item">
@@ -459,30 +459,72 @@
 
         <!-- Tópicos da direita -->
         <div class="topicos-coluna topicos-direita">
-            <div class="topico-item">
-                <h3 class="topico-titulo"><span class="topico-eyebrow">Entenda sobre</span>Analise de Algoritmos</h3>
-                <p class="topico-texto">Verifico o "custo" de um algoritmo adaptado em termos de tempo, gasto para executa-lo e de espaço(memória) ocupado durante a sua execução e ajudo a procurar um solução.</p>
-            </div>
-             <div class="topico-item">
-                <h3 class="topico-titulo"><span class="topico-eyebrow">Entenda sobre</span>Gestão de Riscos </h3>
-                <p class="topico-texto">Pesquiso e estudo  em como adotar métodos, para podermos evitar que  ocorram outras crises de software. </p>
-            </div>
-             <div class="topico-item">
-                <h3 class="topico-titulo"><span class="topico-eyebrow">Entenda sobre</span>Ferramentas </h3>
-                <p class="topico-texto"> Eu sei utilizar as seguinte ferramentes, HTML, CSS, Javascript, Capcut, Python, Bancos de Dados(SQL) e um pouco de outras ferramentas da Microsoft e da Linguagem JAVA. </p>
-            </div>
+                <div class="topico-item">
+                    <h3 class="topico-titulo"><span class="topico-eyebrow">Entenda sobre</span>Analise de Algoritmos</h3>
+                    <p class="topico-texto">Verifico o "custo" de um algoritmo adaptado em termos de tempo, gasto para executa-lo e de espaço(memória) ocupado durante a sua execução e ajudo a procurar um solução.</p>
+                </div>
+                <div class="topico-item">
+                    <h3 class="topico-titulo"><span class="topico-eyebrow">Entenda sobre</span>Gestão de Riscos </h3>
+                    <p class="topico-texto">Pesquiso e estudo  em como adotar métodos, para podermos evitar que  ocorram outras crises de software. </p>
+                </div>
+                <div class="topico-item">
+                    <h3 class="topico-titulo"><span class="topico-eyebrow">Entenda sobre</span>Ferramentas </h3>
+                    <p class="topico-texto"> Eu sei utilizar as seguinte ferramentes, HTML, CSS, Javascript, Capcut, Python, Bancos de Dados(SQL) e um pouco de outras ferramentas da Microsoft e da Linguagem JAVA. </p>
+                </div>
             
            
            
+            </div>
+
         </div>
 
-    </div>
+        <div class="hero-scroll">
+            <span>rolar</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+   <!-- ───Contato ──── -->
+    <section id="comunicacão">
+                <div class="container">
+                    <div class="form-card">
+                        <h3> Solicitar um compromisso comigo !</h3>
+                        <p>Preencha o formulário abaixo — ele abrirá seu e-mail com a mensagem pronta para envio.</p>
+                        <form id="quoteForm" action="https://formspree.io/f/mykrlaka" method="POST">
+                            <div class="form-row">
+                                <div class="field"><label>Nome completo</label><input type="text" name="nome" required></div>
+                            </div>
+                            <div class="form-row">
+                                <div class="field"><label>E-mail</label><input type="email" name="email" required></div>
+                                <div class="field"><label>Telefone / WhatsApp</label><input type="tel" name="telefone"></div>
+                            </div>
+                            <div class="form-row">
+                                <div class="field full">
+                                    <label>Área de interesse</label>
+                                    <select name="interesse">
+                                        <option>...</option>
+                                        <option>Contratação</option>
+                                        <option>Projetos e Desenvolvimentos</option>
+                                        <option>Criação de Portfólio/Sites/Blog</option>
+                                        <option>Outros</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="field full">
+                                    <label>Conte um pouco sobre o que você está pensando</label>
+                                    <textarea name="mensagem" placeholder="Descreva..."></textarea>
+                                </div>
+                            </div>
+                             <input type="hidden" name="_subject" value="Nova solicitação de orçamento - Site">
+                            <input type="text" name="_gotcha" style="display:none">
 
-    <div class="hero-scroll">
-        <span>rolar</span>
-        <div class="scroll-line"></div>
-    </div>
-</section>
+                            <button type="submit" class="btn btn-primary btn-block"><i class="fa-solid fa-paper-plane"></i> Enviar solicitação </button>
+
+                            <p id="formStatus" class="form-status"></p>
+                        </form>
+                    </div>
+                </div>
+            </section>
 
          <!-- ──── SOBRE ──── -->
             <section id="sobre" class="section-inner">
@@ -566,10 +608,8 @@
                         <h3>Navergação</h3>
                         <ul>
                             <li><a href="#inicio">Início</a></li>
-                            <li><a href="#recursos">Projetos</a></li>
-                            <li><a href="#recursos0">Acessibilidade</a></li>
-                            <li><a href="#recursos1">Desenvolvimento de som</a></li>
-                            <li><a href="#recursos2">Captação de movimentos</a></li>
+                            <li><a href="#recursos">Conteudo</a></li>
+                            <li><a href="#comunicacão">Solicitação</a></li>
                             <li><a href="#sobre">Sobre mim</a></li>
                         </ul>
                        
