@@ -2784,6 +2784,7 @@ footer#contato {
   }
 @media (max-width: 476px) {
   .nav-menu { display: none; }
+  aside-nav{display: none;}
     .nav-logo {
       position: fixed;
         top: 6px;
