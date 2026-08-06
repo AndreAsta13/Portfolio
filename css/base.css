@@ -2600,6 +2600,7 @@ footer#contato {
         flex-direction: row;
         flex-wrap: wrap;
         gap: 0.3rem;
+        display: none;
     }
     .pcd-btn { padding: 6px 8px; font-size: 1.25rem; }
 
@@ -2656,8 +2657,8 @@ footer#contato {
         text-align: center;
     }
 
-    figure { width: 100%; }
-    figure video { width: 100%; height: auto; border-radius: var(--radius-lg); }
+    .figure { width: 100%; }
+    .figure video { width: 100%; height: auto; border-radius: var(--radius-lg); }
 
     .hero h4 {
         position: static;
@@ -2784,7 +2785,7 @@ footer#contato {
   }
 @media (max-width: 476px) {
   .nav-menu { display: none; }
-  aside-nav{display: none;}
+  .aside-nav{display: none;}
     .nav-logo {
       position: fixed;
         top: 6px;
