@@ -2373,6 +2373,7 @@ footer#contato {
         flex-direction: row;
         flex-wrap: wrap;
         gap: 0.35rem;
+        display: none;
     }
 
     .aside-toggle { width: 40px; height: 40px; }
@@ -2564,6 +2565,7 @@ footer#contato {
     }
     .nav-links { gap: 0.5rem; }
     .nav-links li a h4 { font-size: 0.62rem; }
+    .aside-nav{display: none;}
      .pcd-container {
         position: fixed;
         top: 8px;
