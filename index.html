@@ -208,12 +208,13 @@
                             <a href="#recursos">
                                 <h2>Acessibilidade</h2>
                                 <div class="feature-video-wrapper">
-                                    
-                                    <video class="feature-video" id="video-acessibilidade" autoplay  muted playsinline aria-hidden="true">
+                                    <button class="video-mute" data-target="video-acessibilidade" aria-label="Ativar som">🔇</button>
+                                    <video class="feature-video" id="video-acessibilidade" autoplay muted playsinline aria-hidden="true">
                                         <source src="assets/acessibilidade.mp4" type="video/mp4" />
                                     </video>
+                                    <audio id="audio-acessibilidade" src="assets/AudioAcessibilidade.mp3" preload="auto"></audio>
                                     <button class="video-toggle" data-target="video-acessibilidade" aria-label="Pausar vídeo">❚❚</button>
-                                     <button class="video-restart" data-target="video-acessibilidade" aria-label="Reiniciar vídeo">⟲</button>
+                                    <button class="video-restart" data-target="video-acessibilidade" aria-label="Reiniciar vídeo">⟲</button>
                                 </div>
                             </a>
                         </article>
@@ -465,7 +466,7 @@
                 </div>
                 <div class="topico-item">
                     <h3 class="topico-titulo"><span class="topico-eyebrow">Entenda sobre</span>Gestão de Riscos </h3>
-                    <p class="topico-texto">Pesquiso e estudo  em como adotar métodos, para podermos evitar que  ocorram outras crises de software. </p>
+                    <p class="topico-texto">Pesquiso e estudo  em como adotar métodos, para podermos evitar que  ocorram uma falha no desenvolvimento  do software. </p>
                 </div>
                 <div class="topico-item">
                     <h3 class="topico-titulo"><span class="topico-eyebrow">Entenda sobre</span>Ferramentas </h3>

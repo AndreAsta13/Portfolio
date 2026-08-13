@@ -317,6 +317,14 @@ const videoSom            = document.getElementById('video-som');
 
 videoAcessibilidade.addEventListener('ended', () => {
   videoAcessibilidade.currentTime = 0;
+
+  // pausa o áudio de acessibilidade quando o vídeo troca pro próximo da sequência
+  const audioAcessibilidade = document.getElementById('audio-acessibilidade');
+  if (audioAcessibilidade) {
+    audioAcessibilidade.pause();
+    audioAcessibilidade.currentTime = 0;
+  }
+
   videoSom.play();
 });
 
@@ -347,13 +355,19 @@ document.querySelectorAll('.video-toggle').forEach(btn => {
     e.stopPropagation();
 
     const video = document.getElementById(btn.dataset.target);
+    const audio = document.getElementById(btn.dataset.target.replace('video-', 'audio-'));
 
     if (video.paused) {
       video.play();
+      if (audio && audio.dataset.wasPlaying === 'true') audio.play(); // só retoma se já estava tocando antes
       btn.textContent = '❚❚';
       btn.setAttribute('aria-label', 'Pausar vídeo');
     } else {
       video.pause();
+      if (audio) {
+        audio.dataset.wasPlaying = audio.paused ? 'false' : 'true';
+        audio.pause();
+      }
       btn.textContent = '►';
       btn.setAttribute('aria-label', 'Reproduzir vídeo');
     }
@@ -419,6 +433,13 @@ document.querySelectorAll('.video-restart').forEach(btn => {
     video.currentTime = 0;
     video.play();
 
+    // sincroniza o áudio externo (ex: acessibilidade), se existir e estiver tocando
+    const audio = document.getElementById(btn.dataset.target.replace('video-', 'audio-'));
+    if (audio && !audio.paused) {
+      audio.currentTime = 0;
+      audio.play();
+    }
+
     // sincroniza o botão de play/pause, já que reiniciar sempre retoma o play
     const toggleBtn = document.querySelector(`.video-toggle[data-target="${btn.dataset.target}"]`);
     if (toggleBtn) {
@@ -433,10 +454,29 @@ document.querySelectorAll('.video-mute').forEach(btn => {
     e.stopPropagation();
 
     const video = document.getElementById(btn.dataset.target);
-    video.muted = !video.muted;
+    const audioId = btn.dataset.target.replace('video-', 'audio-');
+    const audio = document.getElementById(audioId);
 
-    btn.textContent = video.muted ? '🔇' : '🔊';
-    btn.setAttribute('aria-label', video.muted ? 'Ativar som' : 'Silenciar vídeo');
+    if (audio) {
+      // este card tem áudio externo (ex: acessibilidade)
+      if (audio.paused) {
+        audio.currentTime = video.currentTime;
+        audio.play();
+        audio.dataset.wasPlaying = 'true';
+        btn.textContent = '🔊';
+        btn.setAttribute('aria-label', 'Silenciar vídeo');
+      } else {
+        audio.pause();
+        audio.dataset.wasPlaying = 'false';
+        btn.textContent = '🔇';
+        btn.setAttribute('aria-label', 'Ativar som');
+      }
+    } else {
+      // comportamento antigo, para os demais vídeos
+      video.muted = !video.muted;
+      btn.textContent = video.muted ? '🔇' : '🔊';
+      btn.setAttribute('aria-label', video.muted ? 'Ativar som' : 'Silenciar vídeo');
+    }
   });
 });
 window.addEventListener('resize', () => {
