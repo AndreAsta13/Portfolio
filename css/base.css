@@ -2702,12 +2702,21 @@ footer#contato {
 }
     .feature-card:nth-child(3) .feature-video-wrapper { flex: 1; }
 
-    .video-toggle, .video-restart, .video-mute {
+     .video-mute {
         width: 28px; height: 28px; font-size: .68rem;
-        bottom: .5rem;
+        bottom: 10px;
     }
-    .video-toggle { right: .5rem; }
-    .video-restart { right: 2.75rem; }
+      #recursos .video-restart, 
+      #recursos .video-toggle 
+      {
+          font-size: 25px;
+          top: 50%;
+          transform: translateY(-50%);
+          display: inline-flex;
+          margin: 0 5px;
+      }
+    .video-toggle { right: .5rem;  }
+    .video-restart { right: 2.75rem;}
     .video-mute { left: .4rem; }
 
      #recursos0, #recursos1, #recursos2, #recursos3 {
